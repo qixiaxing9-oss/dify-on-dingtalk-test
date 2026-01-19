@@ -101,7 +101,7 @@ class DifyAiCardBotHandler(ChatbotHandler):
             inputs={"sys_user_id": incoming_message.sender_staff_id},
             query=request_content,
             user=incoming_message.sender_nick,
-            response_mode="streaming",
+            response_mode="blocking",
             files=None,
             conversation_id=conversation_id,  # 需要考虑下怎么让一个用户的回话保持自己的上下文
         )
